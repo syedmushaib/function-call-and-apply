@@ -13,9 +13,11 @@ const printInfo = function (name, marks) {
 const studentObj = {
   className : "B.sc",
   studentFn : function (fn) {
-    let name = arguments[1];
-    let marks = arguments[2];
+    //refObj is a printInfo function ();
+    const [refObj, name, marks] = arguments;
     fn.apply(this, [name, marks]);
+    //Exmaple using call 
+    //fn.call(this, name, marks);
   } 
 };
 
